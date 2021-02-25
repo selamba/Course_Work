@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Course Work</string>
+    <string name="course_rating" >5</string>
+    <string name="course_name" />
+</resources>
