@@ -11,27 +11,21 @@ public class CpuInspector {
          * contact@atiar.info
          */
 
-        ProcessBuilder processBuilder;
         String cpuDetails = "";
         String[] DATA = {"/system/bin/cat", "/proc/cpuinfo"};
-        InputStream is;
-        Process process ;
-        byte[] bArray ;
-        bArray = new byte[1024];
 
-        try{
-            processBuilder = new ProcessBuilder(DATA);
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder(DATA);
+            Process process = processBuilder.start();
+            InputStream inputStream = process.getInputStream();
+            byte[] byteArray = new byte[1024];
 
-            process = processBuilder.start();
-
-            is = process.getInputStream();
-
-            while(is.read(bArray) != -1){
-                cpuDetails = cpuDetails + new String(bArray);
+            while(inputStream.read(byteArray) != -1){
+                cpuDetails = cpuDetails + new String(byteArray);
             }
-            is.close();
+            inputStream.close();
 
-        } catch(IOException ex){
+        } catch(IOException ex) {
             ex.printStackTrace();
         }
 
