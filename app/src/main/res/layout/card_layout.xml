@@ -44,7 +44,7 @@
             android:id="@+id/textViewCoreNumber"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
@@ -61,10 +61,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/textViewCoreNumber"
+            android:layout_toEndOf="@id/textViewCPUFreqCurText"
             android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="1866" />
+
+        <TextView
+            android:id="@+id/textViewCPUFreqCurText"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewCoreNumber"
+            android:text="Current:"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textViewCPUFreqMax"
@@ -73,10 +84,22 @@
             android:layout_below="@+id/textViewCPUFreqCur"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/textViewCoreNumber"
+            android:layout_toEndOf="@id/textViewCPUFreqMaxText"
             android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="2166" />
+
+        <TextView
+            android:id="@+id/textViewCPUFreqMaxText"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCPUFreqCur"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewCoreNumber"
+            android:text="Maximum:"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textViewCPUFreqMin"
@@ -85,9 +108,21 @@
             android:layout_below="@id/textViewCPUFreqMax"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/textViewCoreNumber"
+            android:layout_toEndOf="@id/textViewCPUFreqMinText"
             android:textColor="@color/black"
             android:textSize="18sp"
             tools:text="688" />
+
+        <TextView
+            android:id="@+id/textViewCPUFreqMinText"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewCPUFreqMax"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewCoreNumber"
+            android:text="Minimum:"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
