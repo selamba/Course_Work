@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_margin="1dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="8dp"
-    app:cardElevation="8dp"
+    app:cardElevation="2dp"
     app:cardMaxElevation="10dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
@@ -28,42 +28,66 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!--ImageVIew to display our Course Image-->
         <ImageView
-            android:id="@+id/idIVCourseImage"
+            android:id="@+id/imageCPUCore"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:contentDescription="@string/app_name"
-            android:padding="5dp"
-            android:src="@android:drawable/btn_star" />
-
-        <!--Text View to display Course Name-->
-        <TextView
-            android:id="@+id/idTVCourseName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/idIVCourseImage"
-            android:text="@string/course_name"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            app:srcCompat="@drawable/cpu_core" />
+
+        <TextView
+            android:id="@+id/textViewCoreNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/imageCPUCore"
+            android:gravity="center"
+            android:text="Core N"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!--Text VIew to display COurse Rating-->
-        <!--Image used in present in drawable folder-->
         <TextView
-            android:id="@+id/idTVCourseRating"
+            android:id="@+id/textViewCPUFreqCur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/idTVCourseName"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@id/idIVCourseImage"
-            android:drawablePadding="2dp"
-            android:text="@string/course_rating"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewCoreNumber"
             android:textColor="@color/black"
-            app:drawableStartCompat="@android:drawable/btn_star_big_on" />
+            android:textSize="18sp"
+            tools:text="1866" />
+
+        <TextView
+            android:id="@+id/textViewCPUFreqMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCPUFreqCur"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewCoreNumber"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="2166" />
+
+        <TextView
+            android:id="@+id/textViewCPUFreqMin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewCPUFreqMax"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewCoreNumber"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="688" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
